@@ -1,0 +1,7 @@
+dfaserver:
+  name: (local)
+  catalog:  DFAHYDDEV
+  userid: stds
+  password: P@ssw0rd
+  sourcepath: ./dfa_import.xls
+  

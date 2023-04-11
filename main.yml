@@ -3,5 +3,5 @@ dfaserver:
   catalog:  DFAHYDDEV
   userid: stds
   password: P@ssw0rd
-  sourcepath: ./dfa_import.xls
-  
+  sourcepath: ./bfanew_import.xls
+  table: rawdata1

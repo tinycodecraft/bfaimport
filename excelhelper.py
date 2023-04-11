@@ -26,11 +26,11 @@ class ExcelImport:
                 logger.info(f'at index {index} with id: {row.Id}')
     
     @logger.catch                
-    def savetable(self,server,database,username,password):
+    def savetable(self,server,database,username,password,totable):
         connection_string = "DRIVER={ODBC Driver 18 for SQL Server};" + f'SERVER={server};DATABASE={database};UID={username};PWD={password};Encrypt=yes;TrustServerCertificate=yes;'
         connection_url = URL.create("mssql+pyodbc",query={"odbc_connect": connection_string})
         engine = create_engine(connection_url)
-        self.__df.to_sql(name="rawdata",con=engine,index=False,if_exists='append')
+        self.__df.to_sql(name=totable,con=engine,index=False,if_exists='append')
             
     
     

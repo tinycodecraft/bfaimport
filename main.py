@@ -15,10 +15,11 @@ if __name__ == '__main__':
     username = datafile.username
     password = datafile.password
     sourcepath = datafile.sourcepath
+    totable = datafile.table
     logger.debug(f'parameters imports with server {server}, database {database}, user {username} password {password} sourcepath {sourcepath}')
     importHelper = ExcelImport(Path(sourcepath).absolute())
     importHelper.testconnect(server,database,username,password)
-    importHelper.savetable(server,database,username,password)
+    importHelper.savetable(server,database,username,password,totable)
     
     
     

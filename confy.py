@@ -9,6 +9,7 @@ class ConfData:
         self.__username = config['dfaserver']['userid'].get(str)
         self.__password = config['dfaserver']['password'].get(str)      
         self.__sourcepath = config['dfaserver']['sourcepath'].get(str)
+        self.__table = config['dfaserver']['table'].get(str)
         pass
     
     @classmethod
@@ -34,4 +35,6 @@ class ConfData:
     @property
     def sourcepath(self):
         return self.__sourcepath
-    
+    @property
+    def table(self):
+        return self.__table
